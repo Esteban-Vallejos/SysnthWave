@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Bots</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #b700ff, #2974ff); /* Degradado de dos colores */
+            height: 100vh; /* Ajusta la altura al 100% del viewport */
+        }
+
+        #botSelection {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #ffe6e6;
+        }
+
+        #botSelection h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .botButton {
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.3s ease;
+            max-width: 100px; /* Tamaño máximo de la imagen/botón */
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .botButton:hover {
+            transform: scale(1.1); /* Efecto de escala al pasar el ratón */
+        }
+
+        #botImages {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="botSelection">
+    <h2>Selecciona dos bots:</h2>
+    <img class="botButton" onclick="seleccionarBot('bot1')" src="../img/allegro.png" alt="Bot 1">
+    <img class="botButton" onclick="seleccionarBot('bot2')" src="path-to-bot2-image.jpg" alt="Bot 2">
+</div>
+
+<script>
+    function seleccionarBot(bot) {
+        if (bot === 'bot1') {
+            window.location.href = 'https://www.ejemplo.com/pagina-bot1';
+        } else if (bot === 'bot2') {
+            window.location.href = 'https://www.ejemplo.com/pagina-bot2';
+        }
+    }
+</script>
+
+</body>
+</html>
